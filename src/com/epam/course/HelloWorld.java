@@ -11,6 +11,6 @@ package com.epam.course;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.printf("'%S' %n", "hello goodwin!");
     }
 }
