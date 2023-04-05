@@ -23,35 +23,48 @@ public class Main {
         arr[4] = new Book("Story of kind", "8637289108392", "Lena Green", "J.Caster",
                 "16.07.2005", "Soft");
 
+        Authors[] arrA = new Authors[4];
+        arrA[0] = new Authors("Fiona Larson", "32198-15F");
+        arrA[1] = new Authors("Jimmy Grey", "84593-05J");
+        arrA[2] = new Authors("Lizzy Taylor", "39044-19L");
+        arrA[3] = new Authors("Lena Green", "24583-17L");
+
+        Publishers[] arrB = new Publishers[2];
+        arrB[0] = new Publishers("Aster", "A-29847", "Almaty, 94 Apple st.");
+        arrB[1] = new Publishers("J.Caster", "J-89365", "Almaty, 45 Vernyy st.");
+
+
         String displayAuthor = "Jimmy Grey";
         String displayPublisher = "Aster";
         String displayName = "Cats";
         String displayPaperback = "Hard";
 
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i].getAuthor().equals(displayAuthor)) {
-                System.out.println(arr[i]);
+
+
+        for (Book value : arr) {
+            if (value.getAuthor().equals(displayAuthor)) {
+                System.out.println(value);
             }
         }
         System.out.println();
 
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i].getPublisher().equals(displayPublisher)) {
-                System.out.println(arr[i]);
+        for (Book value : arr) {
+            if (value.getPublisher().equals(displayPublisher)) {
+                System.out.println(value);
             }
         }
         System.out.println();
 
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i].getName().equals(displayName)) {
-                System.out.println(arr[i]);
+        for (Book book : arr) {
+            if (book.getName().equals(displayName)) {
+                System.out.println(book);
             }
         }
         System.out.println();
 
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i].getPaperback().equals(displayPaperback)) {
-                System.out.println(arr[i]);
+        for (Book book : arr) {
+            if (book.getPaperback().equals(displayPaperback)) {
+                System.out.println(book);
             }
         }
         System.out.println();

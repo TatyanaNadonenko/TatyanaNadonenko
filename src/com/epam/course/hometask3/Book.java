@@ -2,11 +2,10 @@ package com.epam.course.hometask3;
 
 public class Book {
     protected String name;
-    protected String id;
 
-    public Book (String name, String id) {
+
+    public Book (String name) {
         this.name = name;
-        this.id = id;
     }
 
     private String isbn;
@@ -34,13 +33,6 @@ public class Book {
         this.name = name;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getIsbn() {
         return isbn;
@@ -85,8 +77,7 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
-                ", id='" + id + '\'' +
+                "name='" + name + '\'' + '\'' +
                 ", isbn='" + isbn + '\'' +
                 ", author='" + author + '\'' +
                 ", publisher='" + publisher + '\'' +
