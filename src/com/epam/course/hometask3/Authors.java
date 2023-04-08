@@ -1,26 +1,39 @@
 package com.epam.course.hometask3;
 
-class Authors extends Book {
+class Authors {
+    private String name;
+    private int id;
 
-    private String id;
-
-    public Authors(String id, String name) {
-        super(name);
+    public Authors(String name, int id) {
+        this.name = name;
         this.id = id;
     }
 
-    public String getId() {
+    public Authors() {
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
     @Override
     public String toString() {
         return "Authors{" +
-                "id='" + id + '\'' +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

@@ -1,28 +1,30 @@
 package com.epam.course.hometask3;
 
 public class Book {
-    protected String name;
-
-
-    public Book (String name) {
-        this.name = name;
-    }
-
-    private String isbn;
-    private String author;
-    private String publisher;
+    private int isbn;
+    private String name;
+    Authors author;
+    Publishers publisher;
     private String publicationDate;
-    private  String paperback;
+    private boolean paperback;
 
-    public Book(String name, String isbn, String author,
-                String publisher, String publicationDate,
-                String paperback) {
-        this.name = name;
+    public Book(int isbn, String name, Authors author,
+                Publishers publisher, String publicationDate,
+                boolean paperback) {
         this.isbn = isbn;
+        this.name = name;
         this.author = author;
         this.publisher = publisher;
         this.publicationDate = publicationDate;
         this.paperback = paperback;
+    }
+
+    public int getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
     }
 
     public String getName() {
@@ -33,28 +35,19 @@ public class Book {
         this.name = name;
     }
 
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public String getAuthor() {
+    public Authors getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Authors author) {
         this.author = author;
     }
 
-    public String getPublisher() {
+    public Publishers getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(Publishers publisher) {
         this.publisher = publisher;
     }
 
@@ -66,25 +59,25 @@ public class Book {
         this.publicationDate = publicationDate;
     }
 
-    public String getPaperback() {
+    public boolean getPaperback() {
         return paperback;
     }
 
-    public void setPaperback(String paperback) {
+    public void setPaperback(boolean paperback) {
         this.paperback = paperback;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' + '\'' +
-                ", isbn='" + isbn + '\'' +
-                ", author='" + author + '\'' +
-                ", publisher='" + publisher + '\'' +
+                "isbn='" + isbn + '\'' +
+                ", name='" + name + '\'' +
+                ", author=" + author +
+                ", publisher=" + publisher +
                 ", publicationDate='" + publicationDate + '\'' +
                 ", paperback='" + paperback + '\'' +
                 '}';
+
+
     }
-
-
 }
